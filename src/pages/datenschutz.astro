@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+---
+
+<BaseLayout title={`Datenschutzerklärung | ${SITE.name}`} noIndex={true}>
+  <section class="py-16 bg-white">
+    <Container>
+      <div class="max-w-[760px]">
+        <h1 class="text-[36px] font-black text-secondary mb-8">Datenschutzerklärung</h1>
+        <div class="text-[15px] leading-[1.8] text-[#4A5568] flex flex-col gap-6">
+          <div>
+            <h2 class="text-[20px] font-bold text-secondary mb-2">1. Verantwortlicher</h2>
+            <p>{SITE.name}, <!-- TODO: Anschrift -->, Berlin. Telefon: {SITE.phoneDisplay}</p>
+          </div>
+          <div>
+            <h2 class="text-[20px] font-bold text-secondary mb-2">2. Erhebung und Verarbeitung von Daten</h2>
+            <p>Bei Kontaktaufnahme über das Kontaktformular oder per Telefon verarbeiten wir die von Ihnen angegebenen Daten (Name, Kontaktdaten, Anliegen) zur Bearbeitung Ihrer Anfrage gemäß Art. 6 Abs. 1 lit. b DSGVO.</p>
+          </div>
+          <div>
+            <h2 class="text-[20px] font-bold text-secondary mb-2">3. Weitergabe von Daten</h2>
+            <p>Eine Übermittlung Ihrer personenbezogenen Daten an Dritte erfolgt nur, soweit dies zur Vertragserfüllung erforderlich ist oder Sie eingewilligt haben.</p>
+          </div>
+          <div>
+            <h2 class="text-[20px] font-bold text-secondary mb-2">4. Ihre Rechte</h2>
+            <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch. Zudem besteht ein Beschwerderecht bei der zuständigen Aufsichtsbehörde.</p>
+          </div>
+          <div>
+            <h2 class="text-[20px] font-bold text-secondary mb-2">5. Cookies & Tracking</h2>
+            <p>Diese Website verwendet derzeit keine Analyse- oder Marketing-Cookies. <!-- TODO: ggf. anpassen --></p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

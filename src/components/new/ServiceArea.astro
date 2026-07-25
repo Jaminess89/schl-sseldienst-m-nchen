@@ -1,0 +1,25 @@
+---
+// NEW SECTION K — Service area (location info, no fake data)
+const districts = [
+  'Mitte','Friedrichshain-Kreuzberg','Pankow','Charlottenburg-Wilmersdorf','Spandau','Steglitz-Zehlendorf','Tempelhof-Schöneberg','Neukölln','Treptow-Köpenick','Marzahn-Hellersdorf','Lichtenberg','Reinickendorf',
+];
+---
+
+<section id="einsatzgebiet" class="py-16 md:py-24 bg-white">
+  <div class="max-w-[1000px] mx-auto px-4">
+    <div class="text-center max-w-[700px] mx-auto mb-10 reveal">
+      <span class="inline-block text-[13px] font-bold uppercase tracking-wider text-[#4B9511] bg-[#8CC63F]/10 px-3 py-1 rounded-full mb-4">Einsatzgebiet</span>
+      <h2 class="text-3xl md:text-[38px] font-bold text-secondary tracking-tight mb-4">In ganz Berlin für Sie im Einsatz</h2>
+      <p class="text-[16px] text-muted-foreground leading-relaxed">Wir arbeiten in allen Berliner Bezirken – für einzelne Wohnungen, Mehrfamilienhäuser und komplette Immobilienbestände.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2.5 mb-10 reveal">
+      {districts.map((d) => (
+        <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-secondary bg-[#F6F9FC] border border-border px-4 py-2 rounded-full hover:border-[#8CC63F]/50 hover:bg-[#8CC63F]/5 transition-colors">
+          <svg class="w-4 h-4 text-[#4B9511]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          {d}
+        </span>
+      ))}
+    </div>
+    <p class="text-center text-[14px] text-muted-foreground">Anfahrt und Verfügbarkeit werden je nach Objektlage und Auftragsumfang individuell abgestimmt.</p>
+  </div>
+</section>

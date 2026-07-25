@@ -1,0 +1,32 @@
+---
+// NEW SECTION I — FAQ (updated)
+const faqs = [
+  { q: 'Müssen alle vorhandenen Rauchmelder sofort ausgetauscht werden?', a: 'Nein. Zuerst wird geprüft, welche Geräte vorhanden sind und ob sie weiterhin verwendet werden können. Ein Austausch ist in der Regel nur erforderlich, wenn ein Gerät beschädigt, nicht mehr funktionsfähig, ungeeignet ist oder seine vorgesehene Nutzungsdauer erreicht hat.' },
+  { q: 'Was kostet ein Rauchmelderservice?', a: 'Die Kosten hängen unter anderem von der Anzahl der Objekte, Wohnungen und Geräte, der gewünschten Leistung und dem Dokumentationsumfang ab. Auf dieser Website werden daher keine pauschalen Festpreise genannt. Nach Prüfung Ihrer Angaben erhalten Sie eine transparente Einschätzung.' },
+  { q: 'Übernehmen Sie auch mehrere Objekte oder komplette Wohnungsbestände?', a: 'Ja. Unser Service ist für einzelne Wohnungen, Mehrfamilienhäuser und mehrere Objekte gleichermaßen geeignet. Teilen Sie uns die Eckdaten Ihres Bestands mit, und wir stimmen das weitere Vorgehen strukturiert mit Ihnen ab.' },
+  { q: 'Koordinieren Sie die Termine auch direkt mit Bewohnern?', a: 'Auf Wunsch unterstützen wir bei der Terminabstimmung mit Bewohnern, dokumentieren nicht zugängliche Wohnungen und melden Ihnen den Bearbeitungsstand übersichtlich zurück.' },
+  { q: 'Welche Informationen werden in der Dokumentation festgehalten?', a: 'Je nach Auftrag unter anderem Objekt- und Wohnungszuordnung, Anzahl und Position der Geräte, Prüfdaten, festgestellte Auffälligkeiten, durchgeführte Maßnahmen und empfohlene nächste Termine.' },
+  { q: 'Ist die Anfrage verbindlich?', a: 'Nein. Ihre Anfrage ist zunächst unverbindlich. Sie erhalten anschließend eine Rückmeldung zu den möglichen nächsten Schritten, bevor eine Beauftragung erfolgt.' },
+  { q: 'Warum haben Rauchwarnmelder keine unbegrenzte Lebensdauer?', a: 'Rauchwarnmelder sind elektronische Geräte mit einer begrenzten Nutzungsdauer. Alterung, Verschmutzung oder Beschädigung können die Funktion beeinträchtigen. Prüfung und ggf. Austausch sollten daher in regelmäßigen Abständen erfolgen.' },
+];
+---
+
+<section id="faq" class="py-16 md:py-24 bg-white">
+  <div class="max-w-[820px] mx-auto px-4">
+    <div class="text-center mb-12 reveal">
+      <span class="inline-block text-[13px] font-bold uppercase tracking-wider text-[#4B9511] bg-[#8CC63F]/10 px-3 py-1 rounded-full mb-4">Häufige Fragen</span>
+      <h2 class="text-3xl md:text-[38px] font-bold text-secondary tracking-tight">FAQ zum Rauchmelderservice</h2>
+    </div>
+    <div class="space-y-3">
+      {faqs.map((f, i) => (
+        <details class={`reveal reveal-delay-${(i % 3) + 1} group bg-[#F6F9FC] border border-border rounded-[14px] overflow-hidden open:bg-white open:border-[#8CC63F]/40 open:shadow-md transition-all`}>
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-bold text-secondary text-[16px] hover:text-[#4B9511] transition-colors [&::-webkit-details-marker]:hidden">
+            {f.q}
+            <svg class="w-5 h-5 shrink-0 text-muted-foreground group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="px-5 pb-5 text-[15px] text-muted-foreground leading-relaxed">{f.a}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

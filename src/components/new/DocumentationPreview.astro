@@ -1,0 +1,106 @@
+---
+// NEW SECTION E — Digital documentation preview
+const infoList = [
+  'Objekt- und Wohnungszuordnung',
+  'Anzahl und Position der erfassten Geräte',
+  'Hersteller und Gerätetyp, soweit erfassbar',
+  'Prüf-, Montage- oder Austauschdatum',
+  'Festgestellte Auffälligkeiten',
+  'Durchgeführte Maßnahmen',
+  'Austausch- oder Handlungshinweise',
+  'Empfohlener nächster Termin',
+  'Fotodokumentation, sofern vereinbart',
+];
+const record = [
+  { k: 'Objekt', v: 'Musterstraße 12, 10115 Berlin' },
+  { k: 'Wohnung', v: '2. Obergeschoss links' },
+  { k: 'Geräte erfasst', v: '5' },
+  { k: 'Ohne erkennbare Auffälligkeit', v: '4' },
+  { k: 'Austausch empfohlen', v: '1' },
+  { k: 'Maßnahme', v: 'Gerät nach Abstimmung ersetzt' },
+  { k: 'Status', v: 'Bearbeitung abgeschlossen' },
+];
+---
+
+<section id="dokumentation" class="py-16 md:py-24 bg-white overflow-hidden">
+  <div class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="reveal-left">
+      <span class="inline-block text-[13px] font-bold uppercase tracking-wider text-[#4B9511] bg-[#8CC63F]/10 px-3 py-1 rounded-full mb-4">Nach der Ausführung wissen Sie, was erledigt wurde</span>
+      <h2 class="text-3xl md:text-[38px] font-bold text-secondary tracking-tight mb-5 leading-tight">So kann Ihre digitale Dokumentation aufgebaut sein</h2>
+      <p class="text-[16px] text-muted-foreground leading-relaxed mb-6">Je nach vereinbartem Leistungsumfang erhalten Sie eine nachvollziehbare Übersicht über die geprüften oder bearbeiteten Objekte, Wohnungen und Geräte.</p>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2.5 mb-8">
+        {infoList.map((i) => (
+          <li class="flex items-start gap-2.5">
+            <svg class="w-4.5 h-4.5 w-[18px] h-[18px] text-[#4B9511] mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            <span class="text-[14px] text-secondary leading-snug">{i}</span>
+          </li>
+        ))}
+      </ul>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button" id="doc-preview-btn" class="inline-flex items-center justify-center gap-2 bg-[#1AAAE6] hover:bg-[#1590c4] text-white font-bold text-[15px] px-6 py-3.5 rounded-[10px] transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5">Beispieldokument ansehen</button>
+        <a href="#anfrage" class="inline-flex items-center justify-center gap-2 bg-white border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-bold text-[15px] px-6 py-3.5 rounded-[10px] no-underline transition-all">Dokumentation für mein Objekt anfragen</a>
+      </div>
+    </div>
+
+    <div class="reveal-right">
+      <div class="relative max-w-[460px] mx-auto lg:ml-auto">
+        <div class="absolute -inset-3 bg-gradient-to-br from-[#8CC63F]/15 to-[#1AAAE6]/15 rounded-[24px] blur-xl"></div>
+        <div class="relative bg-white rounded-[18px] shadow-2xl border border-border overflow-hidden">
+          <div class="bg-secondary text-white px-6 py-4 flex items-center justify-between">
+            <p class="text-[14px] font-bold">Objektprotokoll</p>
+            <span class="text-[11px] font-bold bg-[#C88A00] text-white px-2.5 py-1 rounded-full uppercase tracking-wide">Beispiel</span>
+          </div>
+          <div class="p-6">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-4">Beispieldokument – kein echtes Kundenobjekt</p>
+            <div class="space-y-3">
+              {record.map((r) => (
+                <div class="flex items-start justify-between gap-4 text-[14px]">
+                  <span class="text-muted-foreground shrink-0">{r.k}</span>
+                  <span class={`text-right font-semibold ${r.k === 'Status' ? 'text-[#4B9511]' : 'text-secondary'}`}>{r.v}</span>
+                </div>
+              ))}
+            </div>
+            <div class="mt-5 pt-4 border-t border-border flex items-center gap-2">
+              <span class="text-[12px] font-bold text-[#4B9511] bg-[#8CC63F]/15 px-2.5 py-1 rounded-full">4 in Ordnung</span>
+              <span class="text-[12px] font-bold text-[#C88A00] bg-[#C88A00]/10 px-2.5 py-1 rounded-full">1 Austausch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="doc-modal" class="hidden fixed inset-0 z-[60] items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="doc-modal-title">
+    <div class="bg-white rounded-[18px] max-w-[560px] w-full shadow-2xl overflow-hidden">
+      <div class="bg-secondary text-white px-6 py-4 flex items-center justify-between">
+        <p id="doc-modal-title" class="text-[16px] font-bold">Beispieldokument</p>
+        <button type="button" id="doc-modal-close" aria-label="Schließen" class="text-white hover:text-[#8CC63F] text-2xl leading-none">&times;</button>
+      </div>
+      <div class="p-6">
+        <p class="text-[12px] font-bold uppercase tracking-wider text-[#C88A00] mb-4">Beispiel – kein echtes Kundenobjekt</p>
+        <div class="space-y-3 mb-5">
+          {record.map((r) => (
+            <div class="flex items-start justify-between gap-4 text-[14px] border-b border-border pb-2">
+              <span class="text-muted-foreground">{r.k}</span>
+              <span class="text-right font-semibold text-secondary">{r.v}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-[13px] text-muted-foreground italic">Dies ist ein rein illustratives Beispiel. Das tatsächliche Format richtet sich nach dem vereinbarten Auftrag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const btn = document.getElementById('doc-preview-btn');
+  const modal = document.getElementById('doc-modal');
+  const close = document.getElementById('doc-modal-close');
+  const open = () => { modal?.classList.remove('hidden'); modal?.classList.add('flex'); };
+  const hide = () => { modal?.classList.add('hidden'); modal?.classList.remove('flex'); };
+  btn?.addEventListener('click', open);
+  close?.addEventListener('click', hide);
+  modal?.addEventListener('click', (e) => { if (e.target === modal) hide(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hide(); });
+</script>

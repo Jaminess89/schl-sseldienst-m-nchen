@@ -1,0 +1,39 @@
+---
+// NEW SECTION A — Target audience
+const audiences = [
+  { title: 'Vermieter', text: 'Rauchmelderbestände prüfen, erkennbare Lücken schließen und ausgeführte Arbeiten nachvollziehbar dokumentieren lassen.', icon: 'M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 12h.01M9 15h.01M15 9h.01M15 12h.01M15 15h.01' },
+  { title: 'Hausverwaltungen', text: 'Mehrere Wohnungen und Liegenschaften mit klaren Abläufen, übersichtlichen Ergebnissen und einem festen Ansprechpartner betreuen.', icon: 'M3 21h18M6 21V5a2 2 0 012-2h8a2 2 0 012 2v16M10 7h.01M10 11h.01M10 15h.01M14 7h.01M14 11h.01M14 15h.01' },
+  { title: 'WEG-Verwaltungen', text: 'Maßnahmen einheitlich vorbereiten, abstimmen und für die betreuten Objekte nachvollziehbar umsetzen lassen.', icon: 'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75' },
+  { title: 'Wohnungsunternehmen', text: 'Größere Bestände systematisch erfassen, prüfen, warten und dokumentieren lassen.', icon: 'M3 21h18M5 21V8l7-5 7 5v13M12 21v-6h-2v6M9 11h.01M15 11h.01' },
+  { title: 'Gewerbekunden', text: 'Passende Warnmelderlösungen für unterschiedliche Gebäudearten und Nutzungsbereiche abstimmen lassen.', icon: 'M20 7h-9M14 17H5M17 3l4 4-4 4M7 21l-4-4 4-4' },
+];
+---
+
+<section id="fuer-wen" class="py-16 md:py-24 bg-white">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <div class="text-center max-w-[760px] mx-auto mb-12 md:mb-16 reveal">
+      <h2 class="text-3xl md:text-[40px] font-bold text-secondary tracking-tight mb-4">Für wen wir arbeiten</h2>
+      <div class="w-[60px] h-[3px] bg-[#8CC63F] mx-auto mb-6"></div>
+      <p class="text-[16px] md:text-[18px] text-muted-foreground leading-relaxed">
+        Ob einzelne Wohnung, Mehrfamilienhaus oder kompletter Immobilienbestand: Wir unterstützen Verantwortliche dabei, Rauchwarnmelder strukturiert prüfen, installieren, warten und dokumentieren zu lassen.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+      {audiences.map((a, i) => (
+        <div class={`reveal reveal-delay-${(i % 3) + 1} group relative bg-[#F6F9FC] border border-border rounded-[18px] p-6 md:p-7 hover:bg-white hover:shadow-xl hover:-translate-y-1 hover:border-[#8CC63F]/40 transition-all duration-300`}>
+          <div class="w-12 h-12 rounded-[12px] bg-[#8CC63F]/10 text-[#4B9511] flex items-center justify-center mb-5 group-hover:bg-[#8CC63F] group-hover:text-white transition-colors duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d={a.icon} /></svg>
+          </div>
+          <h3 class="text-[19px] font-bold text-secondary mb-2">{a.title}</h3>
+          <p class="text-[15px] text-muted-foreground leading-relaxed">{a.text}</p>
+        </div>
+      ))}
+      <div class="reveal reveal-delay-3 flex items-center justify-center bg-secondary text-white rounded-[18px] p-6 md:p-7 sm:col-span-2 lg:col-span-1">
+        <p class="text-[15px] md:text-[16px] font-semibold leading-relaxed text-center">
+          Auch Privatkunden und einzelne Wohnungseigentümer können unseren Service nutzen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

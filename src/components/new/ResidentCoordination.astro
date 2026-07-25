@@ -1,0 +1,82 @@
+---
+// NEW SECTION B — Resident & appointment coordination
+const steps = [
+  { label: 'Objekt übermittelt', state: 'done' },
+  { label: 'Bewohnertermine abgestimmt', state: 'done' },
+  { label: 'Wohnungen bearbeitet', state: 'active' },
+  { label: 'Statusübersicht bereitgestellt', state: 'pending' },
+];
+const benefits = [
+  'Weniger eigener Verwaltungsaufwand',
+  'Strukturierte Terminplanung',
+  'Rückmeldung bei nicht erreichten Bewohnern',
+  'Zentrale Übersicht nach Abschluss',
+];
+---
+
+<section id="bewohnerkoordination" class="py-16 md:py-24 bg-[#F6F9FC] overflow-hidden">
+  <div class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="reveal-left">
+      <span class="inline-block text-[13px] font-bold uppercase tracking-wider text-[#4B9511] bg-[#8CC63F]/10 px-3 py-1 rounded-full mb-4">Weniger Abstimmung. Mehr Überblick.</span>
+      <h2 class="text-3xl md:text-[38px] font-bold text-secondary tracking-tight mb-5 leading-tight">Auf Wunsch koordinieren wir die Durchführung direkt mit Ihren Bewohnern</h2>
+      <p class="text-[16px] text-muted-foreground leading-relaxed mb-7">
+        Sie müssen nicht jedem Termin selbst hinterhertelefonieren. Auf Wunsch unterstützen wir bei der Terminabstimmung mit Bewohnern, dokumentieren nicht zugängliche Wohnungen und geben Ihnen eine übersichtliche Rückmeldung zum Bearbeitungsstand.
+      </p>
+      <ul class="space-y-3 mb-8">
+        {benefits.map((b) => (
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-[#4B9511] mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            <span class="text-[15px] font-semibold text-secondary">{b}</span>
+          </li>
+        ))}
+      </ul>
+      <a href="#anfrage" class="inline-flex items-center gap-2 bg-[#1AAAE6] hover:bg-[#1590c4] text-white font-bold text-[16px] px-6 py-3.5 rounded-[10px] no-underline transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5">
+        Bewohnerkoordination anfragen
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+    </div>
+
+    <div class="reveal-right">
+      <div class="relative bg-white rounded-[20px] shadow-2xl border border-border p-6 md:p-8 max-w-[440px] mx-auto lg:ml-auto">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <p class="text-[12px] font-bold uppercase tracking-wider text-muted-foreground">Ablauf</p>
+            <p class="text-[18px] font-bold text-secondary">Objekt Musterhaus 12</p>
+          </div>
+          <span class="text-[12px] font-bold text-[#1AAAE6] bg-[#1AAAE6]/10 px-3 py-1 rounded-full">Live-Status</span>
+        </div>
+        <div class="relative pl-2">
+          <div class="absolute left-[19px] top-2 bottom-6 w-[2px] bg-border"></div>
+          {steps.map((s) => (
+            <div class="relative flex items-center gap-4 pb-7 last:pb-0">
+              <span class={`relative z-10 w-9 h-9 rounded-full flex items-center justify-center shrink-0 border-2 ${
+                s.state === 'done' ? 'bg-[#8CC63F] border-[#8CC63F] text-white' :
+                s.state === 'active' ? 'bg-white border-[#1AAAE6] text-[#1AAAE6]' :
+                'bg-white border-border text-muted-foreground'
+              }`}>
+                {s.state === 'done' ? (
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                ) : s.state === 'active' ? (
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#1AAAE6] animate-pulse"></span>
+                ) : (
+                  <span class="w-2.5 h-2.5 rounded-full bg-border"></span>
+                )}
+              </span>
+              <div class="flex-1">
+                <p class={`text-[15px] font-semibold ${s.state === 'pending' ? 'text-muted-foreground' : 'text-secondary'}`}>{s.label}</p>
+                {s.state === 'active' && <p class="text-[13px] text-[#1AAAE6] font-semibold">In Bearbeitung</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-6 pt-5 border-t border-border flex items-center justify-between">
+          <p class="text-[13px] text-muted-foreground">Wohnungen abgeschlossen</p>
+          <p class="text-[15px] font-bold text-secondary">18 / 24</p>
+        </div>
+        <div class="mt-2 h-2 rounded-full bg-border overflow-hidden">
+          <div class="h-full w-3/4 bg-gradient-to-r from-[#8CC63F] to-[#4B9511] rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

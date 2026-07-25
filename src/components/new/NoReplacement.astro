@@ -1,0 +1,30 @@
+---
+// NEW SECTION D — No unnecessary replacement
+const statuses = [
+  { title: 'Weiter nutzbar', text: 'Vorhandene Geräte erfüllen nach Prüfung weiterhin ihren vorgesehenen Zweck.', color: '#4B9511', bg: '#8CC63F/12', icon: 'M5 13l4 4L19 7' },
+  { title: 'Korrektur erforderlich', text: 'Montageposition, Befestigung oder Ausstattung muss angepasst werden.', color: '#1AAAE6', bg: '#1AAAE6/12', icon: 'M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z' },
+  { title: 'Austausch sinnvoll', text: 'Das Gerät ist beschädigt, nicht mehr funktionsfähig, ungeeignet oder erreicht seine vorgesehene Nutzungsdauer.', color: '#C88A00', bg: '#C88A00/12', icon: 'M4 4v6h6M20 20v-6h-6M20 9A8 8 0 005.6 5.6L4 7m0 8a8 8 0 0014.4 3.4L20 17' },
+];
+---
+
+<section id="kein-paustausch" class="py-16 md:py-24 bg-[#F6F9FC]">
+  <div class="max-w-[1100px] mx-auto px-4">
+    <div class="text-center max-w-[740px] mx-auto mb-12 reveal">
+      <span class="inline-block text-[13px] font-bold uppercase tracking-wider text-[#4B9511] bg-[#8CC63F]/10 px-3 py-1 rounded-full mb-4">Erst prüfen. Dann entscheiden.</span>
+      <h2 class="text-3xl md:text-[38px] font-bold text-secondary tracking-tight mb-4">Wir tauschen nicht automatisch alle vorhandenen Rauchmelder aus</h2>
+      <p class="text-[16px] text-muted-foreground leading-relaxed">Zuerst prüfen wir, was bereits vorhanden ist. Manche Geräte können weiterverwendet werden, andere müssen möglicherweise neu positioniert, ergänzt oder ausgetauscht werden. Sie erhalten eine nachvollziehbare Einschätzung, bevor zusätzliche Maßnahmen ausgeführt werden.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {statuses.map((s, i) => (
+        <div class={`reveal reveal-delay-${i + 1} bg-white border border-border rounded-[18px] p-6 md:p-7 hover:shadow-lg hover:-translate-y-1 transition-all`}>
+          <div class={`w-12 h-12 rounded-[12px] bg-[${s.bg}] text-[${s.color}] flex items-center justify-center mb-5`} style={`background-color:color-mix(in srgb, ${s.color} 12%, white);color:${s.color}`}>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d={s.icon} /></svg>
+          </div>
+          <h3 class="text-[19px] font-bold text-secondary mb-2">{s.title}</h3>
+          <p class="text-[15px] text-muted-foreground leading-relaxed">{s.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

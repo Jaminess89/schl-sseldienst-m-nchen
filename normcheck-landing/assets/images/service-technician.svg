@@ -1,0 +1,60 @@
+<!--
+  PLACEHOLDER-GRAFIK: Bitte vor Veröffentlichung durch ein echtes Foto ersetzen
+  (service-technician.webp, ca. 900 × 700 px).
+  Motiv: Servicetechniker montiert bzw. prüft einen Rauchwarnmelder an der Decke.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 373" role="img" aria-labelledby="serviceTitle">
+  <title id="serviceTitle">Illustration: Servicetechniker prüft einen Rauchwarnmelder an der Zimmerdecke</title>
+  <defs>
+    <linearGradient id="wall2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6FAFD"/>
+      <stop offset="1" stop-color="#E6EFF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="373" fill="url(#wall2)"/>
+  <rect y="300" width="480" height="73" fill="#DCE6F1"/>
+  <rect y="296" width="480" height="5" fill="#C6D5E5"/>
+
+  <!-- Decke mit Rauchwarnmelder -->
+  <rect width="480" height="26" fill="#EDF3F9"/>
+  <g>
+    <ellipse cx="240" cy="34" rx="44" ry="13" fill="#E2EAF2"/>
+    <ellipse cx="240" cy="30" rx="36" ry="11" fill="#FFFFFF" stroke="#B9C8D8" stroke-width="2.5"/>
+    <circle cx="240" cy="30" r="5" fill="#25B94B"/>
+  </g>
+
+  <!-- Leiter -->
+  <g stroke="#8AA2BC" stroke-width="8" stroke-linecap="round">
+    <line x1="150" y1="373" x2="205" y2="80"/>
+    <line x1="285" y1="373" x2="240" y2="80"/>
+  </g>
+  <g stroke="#A9BED3" stroke-width="6" stroke-linecap="round">
+    <line x1="170" y1="310" x2="272" y2="310"/>
+    <line x1="182" y1="250" x2="264" y2="250"/>
+    <line x1="194" y1="190" x2="256" y2="190"/>
+    <line x1="205" y1="130" x2="248" y2="130"/>
+  </g>
+
+  <!-- Techniker, Arm nach oben zum Melder -->
+  <g>
+    <rect x="196" y="230" width="30" height="143" fill="#1F2937"/>
+    <rect x="238" y="230" width="30" height="143" fill="#111827"/>
+    <path d="M180 240 L176 150 Q176 112 232 112 Q288 112 288 150 L284 240 Z" fill="#082C5C"/>
+    <path d="M214 116 L232 134 L250 116 L232 110 Z" fill="#0E3E7A"/>
+    <!-- Logo -->
+    <circle cx="206" cy="160" r="11" fill="#1681D8"/>
+    <path d="M201 160 l3.5 3.5 l7 -7.5" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Kopf, nach oben schauend -->
+    <ellipse cx="232" cy="78" rx="33" ry="36" fill="#F2C89B"/>
+    <path d="M200 74 Q197 36 232 34 Q267 36 264 74 Q258 52 232 52 Q206 52 200 74 Z" fill="#4A3222"/>
+    <circle cx="243" cy="72" r="3" fill="#2B2118"/>
+    <path d="M238 90 Q248 95 256 88" fill="none" stroke="#B0714A" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Linker Arm an der Leiter -->
+    <path d="M184 152 Q160 190 168 226 L188 222 Q184 192 198 166 Z" fill="#082C5C"/>
+    <circle cx="178" cy="232" r="10" fill="#F2C89B"/>
+    <!-- Rechter Arm nach oben -->
+    <path d="M272 118 Q300 88 262 56 L246 70 Q272 92 254 112 Z" fill="#0E3E7A"/>
+    <circle cx="252" cy="58" r="10" fill="#F2C89B"/>
+  </g>
+</svg>

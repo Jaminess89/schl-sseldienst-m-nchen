@@ -1,0 +1,92 @@
+---
+import Container from '@/components/Container.astro';
+---
+
+<section class="py-16 md:py-24 bg-white" data-ps="src/components/home/SmokeAlarmLacks.astro:section">
+  <Container>
+    <!-- Header -->
+    <div class="mb-12 md:mb-16" data-ps="src/components/home/SmokeAlarmLacks.astro:header">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FCEDED] text-[#E04F5E] mb-6" data-ps="src/components/home/SmokeAlarmLacks.astro:badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <span class="text-[12px] font-black uppercase tracking-widest" data-ps="src/components/home/SmokeAlarmLacks.astro:badge-text">Oft erst zu spät bemerkt</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black text-secondary mb-4 leading-tight max-w-3xl" data-ps="src/components/home/SmokeAlarmLacks.astro:title">Rauchmelder vorhanden, aber <br class="hidden md:block" />wirklich sicher?</h2>
+      <p class="text-xl text-muted-foreground max-w-2xl" data-ps="src/components/home/SmokeAlarmLacks.astro:subtitle">
+        Entscheidend ist, ob alle nötigen Melder vorhanden, richtig montiert, funktionsfähig und dokumentiert sind.
+      </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:items-stretch mb-12" data-ps="src/components/home/SmokeAlarmLacks.astro:main-grid">
+      <!-- Left: Interactive Image Concept -->
+      <div class="lg:col-span-8 relative h-full flex flex-col" data-ps="src/components/home/SmokeAlarmLacks.astro:img-col">
+        <div class="rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100 flex-grow" data-ps="src/components/home/SmokeAlarmLacks.astro:img-wrap">
+          <img 
+            src="https://pagesmith-cdn.com/2be62e80/images/1-4-Fehler-Service-Punkte-Bild-1536.webp" 
+            alt="Rauchmelder Prüfung Visualisierung" 
+            class="w-full h-full object-cover"
+            data-ps="src/components/home/SmokeAlarmLacks.astro:img"
+          />
+        </div>
+      </div>
+
+      <!-- Right: Lacks List -->
+      <div class="lg:col-span-4 flex flex-col justify-between gap-4" data-ps="src/components/home/SmokeAlarmLacks.astro:list-col">
+        <!-- Point 1 -->
+        <div class="flex items-center gap-6 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow" data-ps="src/components/home/SmokeAlarmLacks.astro:point1">
+          <div class="w-12 h-12 shrink-0 rounded-full bg-secondary flex items-center justify-center text-white font-black text-xl" data-ps="src/components/home/SmokeAlarmLacks.astro:num1">1</div>
+          <div class="flex-grow" data-ps="src/components/home/SmokeAlarmLacks.astro:text1">
+            <h3 class="font-black text-secondary text-lg" data-ps="src/components/home/SmokeAlarmLacks.astro:h3-1">Räume übersehen</h3>
+            <p class="text-sm text-muted-foreground leading-snug" data-ps="src/components/home/SmokeAlarmLacks.astro:p1">Fehlt ein vorgeschriebener Melder, bleibt die Ausstattung unvollständig.</p>
+          </div>
+
+        </div>
+
+        <!-- Point 2 -->
+        <div class="flex items-center gap-6 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow" data-ps="src/components/home/SmokeAlarmLacks.astro:point2">
+          <div class="w-12 h-12 shrink-0 rounded-full bg-secondary flex items-center justify-center text-white font-black text-xl" data-ps="src/components/home/SmokeAlarmLacks.astro:num2">2</div>
+          <div class="flex-grow" data-ps="src/components/home/SmokeAlarmLacks.astro:text2">
+            <h3 class="font-black text-secondary text-lg" data-ps="src/components/home/SmokeAlarmLacks.astro:h3-2">Falsch montiert</h3>
+            <p class="text-sm text-muted-foreground leading-snug" data-ps="src/components/home/SmokeAlarmLacks.astro:p2">Wände, Lampen oder hohe Möbel können die Raucherkennung beeinträchtigen.</p>
+          </div>
+
+        </div>
+
+        <!-- Point 3 -->
+        <div class="flex items-center gap-6 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow" data-ps="src/components/home/SmokeAlarmLacks.astro:point3">
+          <div class="w-12 h-12 shrink-0 rounded-full bg-secondary flex items-center justify-center text-white font-black text-xl" data-ps="src/components/home/SmokeAlarmLacks.astro:num3">3</div>
+          <div class="flex-grow" data-ps="src/components/home/SmokeAlarmLacks.astro:text3">
+            <h3 class="font-black text-secondary text-lg" data-ps="src/components/home/SmokeAlarmLacks.astro:h3-3">Funktion nur vermutet</h3>
+            <p class="text-sm text-muted-foreground leading-snug" data-ps="src/components/home/SmokeAlarmLacks.astro:p3">Staub, Schäden oder Abdeckungen bleiben ohne Prüfung leicht unbemerkt.</p>
+          </div>
+
+        </div>
+
+        <!-- Point 4 -->
+        <div class="flex items-center gap-6 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow" data-ps="src/components/home/SmokeAlarmLacks.astro:point4">
+          <div class="w-12 h-12 shrink-0 rounded-full bg-secondary flex items-center justify-center text-white font-black text-xl" data-ps="src/components/home/SmokeAlarmLacks.astro:num4">4</div>
+          <div class="flex-grow" data-ps="src/components/home/SmokeAlarmLacks.astro:text4">
+            <h3 class="font-black text-secondary text-lg" data-ps="src/components/home/SmokeAlarmLacks.astro:h3-4">Austauschdatum verpasst</h3>
+            <p class="text-sm text-muted-foreground leading-snug" data-ps="src/components/home/SmokeAlarmLacks.astro:p4">Auch ein alter Melder kann beim Test noch einen Ton ausgeben.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Banner -->
+    <div class="bg-secondary rounded-2xl md:rounded-full p-4 md:p-2 pl-6 md:pl-8 flex flex-col md:flex-row items-center gap-4 border border-white/10" data-ps="src/components/home/SmokeAlarmLacks.astro:banner">
+      <div class="flex items-center gap-3 shrink-0" data-ps="src/components/home/SmokeAlarmLacks.astro:banner-left">
+        <div class="w-8 h-8 rounded-full border-2 border-[#97D046] flex items-center justify-center text-[#97D046]" data-ps="src/components/home/SmokeAlarmLacks.astro:banner-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="text-white font-bold text-base md:text-[17px] tracking-wide" data-ps="src/components/home/SmokeAlarmLacks.astro:banner-text1">Wir finden die Lücken, bevor sie zum Problem werden.</span>
+      </div>
+      <div class="hidden md:block w-[1px] h-8 bg-white/30" data-ps="src/components/home/SmokeAlarmLacks.astro:banner-sep"></div>
+      <p class="text-white/90 text-sm md:text-[15px] md:pr-8 leading-snug" data-ps="src/components/home/SmokeAlarmLacks.astro:banner-text2">
+        Digitale Prüfprotokolle schaffen Transparenz und geben Ihnen den Nachweis,<br class="hidden md:block" /> wenn er zählt.
+      </p>
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,48 @@
+---
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+---
+
+<footer class="bg-dark-background text-dark-foreground py-[60px]">
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div>
+        <h2 class="text-[18px] font-bold text-white mb-6">{SITE.name}</h2>
+        <p class="text-[14px] text-dark-muted-foreground leading-relaxed">
+          Professioneller Rauchmelderservice in Berlin: Installation, Prüfung, Wartung und nachvollziehbare Dokumentation für Vermieter, Eigentümer und Hausverwaltungen.
+        </p>
+        {SITE.phone && (
+          <p class="text-[14px] text-dark-muted-foreground mt-4">
+            Telefon: <a class="text-white no-underline hover:text-[#1AAAE6]" href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a>
+          </p>
+        )}
+      </div>
+
+      <div>
+        <h2 class="text-[18px] font-bold text-white mb-6">Navigation</h2>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li><a href="/#fuer-wen" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors">Für wen</a></li>
+          <li><a href="/#pruefung" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors">Prüfung</a></li>
+          <li><a href="/#kosten" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors">Kosten</a></li>
+          <li><a href="/#dokumentation" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors">Dokumentation</a></li>
+          <li><a href="/#faq" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors">FAQ</a></li>
+          <li><a href="/#anfrage" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors">Anfrage</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-[18px] font-bold text-white mb-6">Rechtliches</h2>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li><a href="/datenschutz/" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors">Datenschutzerklärung</a></li>
+          <li><a href="/impressum/" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-dark-border mt-[60px] pt-8 text-center">
+      <p class="text-[13px] text-dark-muted-foreground">
+        © {new Date().getFullYear()} {SITE.name}. Alle Rechte vorbehalten.
+      </p>
+    </div>
+  </Container>
+</footer>

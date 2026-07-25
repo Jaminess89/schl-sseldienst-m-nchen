@@ -1,0 +1,158 @@
+---
+import Container from '@/components/Container.astro';
+---
+
+<section class="py-16 md:py-24 bg-[#FFFFFF] relative overflow-hidden" data-ps="src/components/home/SmokeAlarmChecklist.astro:section">
+  <!-- Background Image for Desktop -->
+  <div class="absolute top-0 right-0 w-1/2 h-full pointer-events-none hidden lg:block z-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:bg-wrap">
+    <img 
+      src="https://pagesmith-cdn.com/2be62e80/images/Seitliches-Bild-640-640.webp"
+      alt=""
+      class="absolute top-[-2rem] lg:top-[-4rem] xl:top-[-6rem] right-[-2rem] w-full max-w-[700px] h-auto object-contain object-right-top opacity-90 [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]"
+      data-ps="src/components/home/SmokeAlarmChecklist.astro:bg-img"
+    />
+  </div>
+
+  <Container class="relative z-10">
+    <div class="max-w-3xl mb-12 md:mb-16" data-ps="src/components/home/SmokeAlarmChecklist.astro:header">
+      <div class="inline-flex items-center gap-2 mb-4" data-ps="src/components/home/SmokeAlarmChecklist.astro:badge">
+        <span class="text-[#4B9511] font-bold text-sm tracking-wider uppercase" data-ps="src/components/home/SmokeAlarmChecklist.astro:badge-text">Erst prüfen. Dann entscheiden.</span>
+        <div class="h-0.5 w-8 bg-[#4B9511]" data-ps="src/components/home/SmokeAlarmChecklist.astro:badge-line"></div>
+      </div>
+      <h2 class="text-h2 md:text-h1 text-[#111827] leading-[1.1] mb-6 md:mr-24 md:text-5xl" data-ps="src/components/home/SmokeAlarmChecklist.astro:title">Wir tauschen nur aus,
+<br/>was wirklich nötig ist.</h2>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed md:pl-0 md:pr-[px] md:mr-[101px]" data-ps="src/components/home/SmokeAlarmChecklist.astro:intro">
+        Nicht jeder vorhandene Rauchmelder muss ersetzt werden. Wir prüfen zuerst, ob Ausstattung, Position, Zustand und Austauschfrist stimmen.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:mt-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:grid">
+      
+      <!-- Card 1: Räume -->
+      <div class="bg-white rounded-[2.5rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row gap-8 relative overflow-hidden" data-ps="src/components/home/SmokeAlarmChecklist.astro:card1">
+        <div class="absolute top-8 left-8 w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-white font-black text-xl z-10" data-ps="src/components/home/SmokeAlarmChecklist.astro:num1">1</div>
+        <div class="lg:w-1/2 shrink-0 pt-12 lg:pt-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:img-wrap1">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 aspect-square" data-ps="src/components/home/SmokeAlarmChecklist.astro:img-box1">
+            <img 
+              src="https://pagesmith-cdn.com/2be62e80/images/Schlaf-und-Kinderzimmer,-Fluchtwege-andere-Zimmer-Bild-1024-1024.webp" 
+              srcset="https://pagesmith-cdn.com/2be62e80/images/Schlaf-und-Kinderzimmer,-Fluchtwege-andere-Zimmer-Bild-1024-1024.webp 1024w, https://pagesmith-cdn.com/2be62e80/images/Schlaf-und-Kinderzimmer,-Fluchtwege-andere-Zimmer-Bild-1024-768.webp 768w, https://pagesmith-cdn.com/2be62e80/images/Schlaf-und-Kinderzimmer,-Fluchtwege-andere-Zimmer-Bild-1024-640.webp 640w, https://pagesmith-cdn.com/2be62e80/images/Schlaf-und-Kinderzimmer,-Fluchtwege-andere-Zimmer-Bild-1024-320.webp 320w"
+              sizes="(max-width: 1024px) 100vw, 25vw"
+              alt="Grundriss Prüfung" 
+              class="w-full h-full object-contain p-4 bg-white"
+              data-ps="src/components/home/SmokeAlarmChecklist.astro:img1"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col justify-between" data-ps="src/components/home/SmokeAlarmChecklist.astro:content1">
+          <div data-ps="src/components/home/SmokeAlarmChecklist.astro:klshq7">
+            <h3 class="text-2xl font-black text-[#111827] mb-4 leading-tight" data-ps="src/components/home/SmokeAlarmChecklist.astro:h3-1">Sind alle Räume ausgestattet?</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed" data-ps="src/components/home/SmokeAlarmChecklist.astro:p1">
+              In Berlin und Brandenburg brauchen Aufenthaltsräume – außer Küchen – sowie Flure, die als Rettungsweg dienen, mindestens einen Rauchwarnmelder.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-50" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-wrap1">
+            <div class="w-7 h-7 rounded-full border-2 border-[#97D046] flex items-center justify-center text-[#97D046] shrink-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-icon1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-[#4B9511] font-bold text-sm" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-text1">Wir prüfen, ob irgendwo ein Melder fehlt.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Montage -->
+      <div class="bg-white rounded-[2.5rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row gap-8 relative overflow-hidden" data-ps="src/components/home/SmokeAlarmChecklist.astro:card2">
+        <div class="absolute top-8 left-8 w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-white font-black text-xl z-10" data-ps="src/components/home/SmokeAlarmChecklist.astro:num2">2</div>
+        <div class="lg:w-1/2 shrink-0 pt-12 lg:pt-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:img-wrap2">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 aspect-square" data-ps="src/components/home/SmokeAlarmChecklist.astro:img-box2">
+            <img 
+              src="https://pagesmith-cdn.com/2be62e80/images/DIN_14676-Bild-1024.webp"
+              sizes="(max-width: 1024px) 100vw, 25vw"
+              alt="Montage Prüfung" 
+              class="w-full h-full object-contain p-4 bg-white"
+              data-ps="src/components/home/SmokeAlarmChecklist.astro:img2"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col justify-between" data-ps="src/components/home/SmokeAlarmChecklist.astro:content2">
+          <div data-ps="src/components/home/SmokeAlarmChecklist.astro:klshq8">
+            <h3 class="text-2xl font-black text-[#111827] mb-4 leading-tight" data-ps="src/components/home/SmokeAlarmChecklist.astro:h3-2">Hängt jeder Melder richtig?</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed" data-ps="src/components/home/SmokeAlarmChecklist.astro:p2">
+              Zu nah an Wänden, Lampen, Balken oder hohen Möbeln kann die Raucherkennung beeinträchtigt werden. Der ideale Platz ist mittig an der Decke mit mind. 50 cm Abstand zu Hindernissen.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-50" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-wrap2">
+            <div class="w-7 h-7 rounded-full border-2 border-[#97D046] flex items-center justify-center text-[#97D046] shrink-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-icon2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-[#4B9511] font-bold text-sm" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-text2">Wir prüfen die Position und geben Empfehlungen.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Zuverlässigkeit -->
+      <div class="bg-white rounded-[2.5rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row gap-8 relative overflow-hidden" data-ps="src/components/home/SmokeAlarmChecklist.astro:card3">
+        <div class="absolute top-8 left-8 w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-white font-black text-xl z-10" data-ps="src/components/home/SmokeAlarmChecklist.astro:num3">3</div>
+        <div class="lg:w-1/2 shrink-0 pt-12 lg:pt-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:img-wrap3">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 aspect-square" data-ps="src/components/home/SmokeAlarmChecklist.astro:img-box3">
+            <img 
+              src="https://pagesmith-cdn.com/2be62e80/images/Funktionstest-1024.webp"
+              sizes="(max-width: 1024px) 100vw, 25vw"
+              alt="Testfunktion Prüfung" 
+              class="w-full h-full object-cover"
+              data-ps="src/components/home/SmokeAlarmChecklist.astro:img3"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col justify-between" data-ps="src/components/home/SmokeAlarmChecklist.astro:content3">
+          <div data-ps="src/components/home/SmokeAlarmChecklist.astro:klshq9">
+            <h3 class="text-2xl font-black text-[#111827] mb-4 leading-tight" data-ps="src/components/home/SmokeAlarmChecklist.astro:h3-3">Funktioniert er zuverlässig?</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed" data-ps="src/components/home/SmokeAlarmChecklist.astro:p3">
+              Wir prüfen Testfunktion, Zustand und Verschmutzung. Bleibt die Rückmeldung aus oder zeigt das Gerät eine Störung, muss gezielt gehandelt werden.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-50" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-wrap3">
+            <div class="w-7 h-7 rounded-full border-2 border-[#97D046] flex items-center justify-center text-[#97D046] shrink-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-icon3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-[#4B9511] font-bold text-sm" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-text3">Wir testen jede Funktion und erkennen Probleme frühzeitig.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Austauschfrist -->
+      <div class="bg-white rounded-[2.5rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row gap-8 relative overflow-hidden" data-ps="src/components/home/SmokeAlarmChecklist.astro:card4">
+        <div class="absolute top-8 left-8 w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-white font-black text-xl z-10" data-ps="src/components/home/SmokeAlarmChecklist.astro:num4">4</div>
+        <div class="lg:w-1/2 shrink-0 pt-12 lg:pt-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:img-wrap4">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 aspect-square" data-ps="src/components/home/SmokeAlarmChecklist.astro:img-box4">
+            <img 
+              src="https://pagesmith-cdn.com/2be62e80/images/10-Jahres-Frist-Bild-Melder-1024.webp"
+              sizes="(max-width: 1024px) 100vw, 25vw"
+              alt="Austauschfrist Prüfung" 
+              class="w-full h-full object-contain p-4 bg-white"
+              data-ps="src/components/home/SmokeAlarmChecklist.astro:img4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col justify-between" data-ps="src/components/home/SmokeAlarmChecklist.astro:content4">
+          <div data-ps="src/components/home/SmokeAlarmChecklist.astro:klshqa">
+            <h3 class="text-2xl font-black text-[#111827] mb-4 leading-tight" data-ps="src/components/home/SmokeAlarmChecklist.astro:h3-4">Ist die Austauschfrist noch gültig?</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed" data-ps="src/components/home/SmokeAlarmChecklist.astro:p4">
+              Herstellungsdatum und Austauschfrist werden leicht übersehen. Rauchwarnmelder sind entsprechend den Herstellerangaben und regelmäßig nach ca. 10 Jahren auszutauschen.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-50" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-wrap4">
+            <div class="w-7 h-7 rounded-full border-2 border-[#97D046] flex items-center justify-center text-[#97D046] shrink-0" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-icon4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-[#4B9511] font-bold text-sm" data-ps="src/components/home/SmokeAlarmChecklist.astro:check-text4">Wir prüfen das Alter und informieren über den Austauschzeitpunkt.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </Container>
+</section>

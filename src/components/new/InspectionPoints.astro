@@ -1,0 +1,34 @@
+---
+// NEW SECTION C — What is actually checked
+const points = [
+  'Funktion und Warnsignal',
+  'Befestigung und Montageposition',
+  'Freie Raucheintrittsöffnungen',
+  'Beschädigung und Verschmutzung',
+  'Gerätealter und Austauschhinweise',
+  'Veränderungen im Raumumfeld',
+  'Fehlende oder zusätzlich erforderliche Geräte',
+  'Dokumentation festgestellter Auffälligkeiten',
+];
+---
+
+<section id="pruefung" class="py-16 md:py-24 bg-white">
+  <div class="max-w-[1100px] mx-auto px-4">
+    <div class="text-center max-w-[720px] mx-auto mb-12 reveal">
+      <span class="inline-block text-[13px] font-bold uppercase tracking-wider text-[#4B9511] bg-[#8CC63F]/10 px-3 py-1 rounded-full mb-4">Klare Prüfpunkte statt allgemeiner Versprechen</span>
+      <h2 class="text-3xl md:text-[38px] font-bold text-secondary tracking-tight mb-4">Was bei einer Rauchmelder-Kontrolle geprüft wird</h2>
+      <p class="text-[16px] text-muted-foreground leading-relaxed">Vorhandene Geräte werden nicht nur kurz getestet. Je nach vereinbartem Leistungsumfang prüfen wir die wesentlichen Punkte, die für Funktion, Zustand und nachvollziehbare Verwaltung relevant sind.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      {points.map((p, i) => (
+        <div class={`reveal reveal-delay-${(i % 4) + 1} flex items-start gap-3 bg-[#F6F9FC] border border-border rounded-[14px] p-4 hover:border-[#8CC63F]/50 hover:shadow-md transition-all`}>
+          <span class="w-7 h-7 rounded-full bg-[#8CC63F]/15 text-[#4B9511] flex items-center justify-center shrink-0 font-bold text-[13px]">{i + 1}</span>
+          <p class="text-[15px] font-semibold text-secondary leading-snug pt-0.5">{p}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-center text-[13px] text-muted-foreground italic max-w-[640px] mx-auto">Der konkrete Prüfumfang richtet sich nach dem vereinbarten Auftrag, den vorhandenen Geräten und den Bedingungen im Objekt.</p>
+  </div>
+</section>

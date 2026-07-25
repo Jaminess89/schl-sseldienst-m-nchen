@@ -1,0 +1,43 @@
+---
+// NEW SECTION G — Cost orientation (no invented prices)
+const factors = [
+  'Anzahl der Gebäude',
+  'Anzahl der Wohnungen',
+  'Anzahl der Rauchwarnmelder',
+  'Installation, Wartung, Kontrolle oder Austausch',
+  'Zustand vorhandener Geräte',
+  'Bewohner- und Terminabstimmung',
+  'Anfahrt und Objektlage',
+  'gewünschter Dokumentationsumfang',
+];
+---
+
+<section id="kosten" class="py-16 md:py-24 bg-white">
+  <div class="max-w-[900px] mx-auto px-4">
+    <div class="text-center max-w-[720px] mx-auto mb-10 reveal">
+      <span class="inline-block text-[13px] font-bold uppercase tracking-wider text-[#4B9511] bg-[#8CC63F]/10 px-3 py-1 rounded-full mb-4">Klarheit vor der Beauftragung</span>
+      <h2 class="text-3xl md:text-[38px] font-bold text-secondary tracking-tight mb-4">Wovon die Kosten Ihres Rauchmelderservices abhängen</h2>
+      <p class="text-[16px] text-muted-foreground leading-relaxed">Der Preis richtet sich unter anderem nach Objektgröße, Anzahl der Wohnungen und Geräte, vorhandener Ausstattung, gewünschter Leistung, Erreichbarkeit der Wohnungen und dem Umfang der Dokumentation.</p>
+    </div>
+
+    <div class="reveal bg-[#F6F9FC] border border-border rounded-[18px] p-6 md:p-8 mb-8">
+      <p class="text-[14px] font-bold uppercase tracking-wider text-muted-foreground mb-5">Kostenfaktoren</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+        {factors.map((f) => (
+          <div class="flex items-start gap-2.5">
+            <svg class="w-[18px] h-[18px] text-[#1AAAE6] mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12" /></svg>
+            <span class="text-[15px] text-secondary">{f}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="text-center reveal">
+      <a href="#anfrage" class="inline-flex items-center gap-2 bg-[#8CC63F] hover:bg-[#7ab336] text-white font-bold text-[16px] px-8 py-4 rounded-[10px] no-underline transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5">
+        Persönlichen Kostenrahmen anfragen
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+      <p class="text-[14px] text-muted-foreground mt-4 max-w-[520px] mx-auto">Unverbindlich. Nach Prüfung Ihrer Angaben erhalten Sie eine nachvollziehbare Einschätzung der nächsten Schritte.</p>
+    </div>
+  </div>
+</section>

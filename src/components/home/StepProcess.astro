@@ -1,0 +1,129 @@
+---
+import Container from '@/components/Container.astro';
+---
+
+<section class="py-16 md:py-24 bg-white md:pb-0 md:pt-0" data-ps="src/components/home/StepProcess.astro:section">
+  <Container>
+    <!-- Header -->
+    <div class="text-center mb-16 md:mb-[15px]" data-ps="src/components/home/StepProcess.astro:header">
+      <div class="flex items-center justify-center gap-4 mb-4" data-ps="src/components/home/StepProcess.astro:badge">
+        <div class="h-[1px] w-8 md:w-12 bg-[#8AC161]" data-ps="src/components/home/StepProcess.astro:line1"></div>
+        <span class="text-[#8AC161] font-bold text-sm tracking-widest uppercase" data-ps="src/components/home/StepProcess.astro:label">Einfacher Ablauf</span>
+        <div class="h-[1px] w-8 md:w-12 bg-[#8AC161]" data-ps="src/components/home/StepProcess.astro:line2"></div>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black text-secondary mb-6 leading-tight" data-ps="src/components/home/StepProcess.astro:title">
+        In 3 Schritten<br />zum digitalen Nachweis
+      </h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto" data-ps="src/components/home/StepProcess.astro:subtitle">Ein Anruf oder Formular genügt - wir kümmern uns um den Rest.</p>
+    </div>
+
+    <!-- Steps Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mb-20 md:mb-[22px]" data-ps="src/components/home/StepProcess.astro:grid">
+      
+      <!-- Step 1 -->
+      <div class="relative flex flex-col group" data-ps="src/components/home/StepProcess.astro:step1">
+        <div class="absolute left-0 top-0 bottom-0 w-1 bg-[#F15A24] z-10" data-ps="src/components/home/StepProcess.astro:border1"></div>
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full" data-ps="src/components/home/StepProcess.astro:card1">
+          <div class="relative h-64 md:h-72 overflow-hidden" data-ps="src/components/home/StepProcess.astro:img-wrap1">
+            <div class="absolute left-0 bottom-0 bg-[#F15A24] text-white font-black text-5xl md:text-[45px] leading-none px-6 md:px-6 pt-4 md:pt-4 pb-3 md:pb-3 rounded-tr-2xl z-20" data-ps="src/components/home/StepProcess.astro:num1">1</div>
+            <img 
+              src="https://pagesmith-cdn.com/2be62e80/images/Kunde-ruft-an-Bild-1024.webp" 
+              alt="Anrufen oder Kontaktformular" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              data-ps="src/components/home/StepProcess.astro:img1"
+            />
+          </div>
+          <div class="p-8 flex flex-col flex-grow" data-ps="src/components/home/StepProcess.astro:content1">
+            <h3 class="text-2xl font-black text-secondary mb-4 leading-tight" data-ps="src/components/home/StepProcess.astro:h3-1">1. Anrufen oder Kontaktformular</h3>
+            <p class="text-muted-foreground leading-relaxed" data-ps="src/components/home/StepProcess.astro:p1">
+              Sie nennen uns kurz das Objekt, die Anzahl der Wohnungen und Ihren Bedarf. Anschließend erhalten Sie ein transparentes Angebot.
+            </p>
+          </div>
+          <!-- Corner Accent -->
+          <div class="absolute bottom-0 right-0 w-12 h-12 bg-[#F15A24]/5 rounded-tl-[100px] border-b-2 border-r-2 border-transparent" data-ps="src/components/home/StepProcess.astro:accent1"></div>
+        </div>
+        <!-- Arrow Visual -->
+        <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-30" data-ps="src/components/home/StepProcess.astro:arrow1">
+          <svg width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L22 24L2 46" stroke="#F15A24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative flex flex-col group" data-ps="src/components/home/StepProcess.astro:step2">
+        <div class="absolute left-0 top-0 bottom-0 w-1 bg-[#1AAAE6] z-10" data-ps="src/components/home/StepProcess.astro:border2"></div>
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full" data-ps="src/components/home/StepProcess.astro:card2">
+          <div class="relative h-64 md:h-72 overflow-hidden" data-ps="src/components/home/StepProcess.astro:img-wrap2">
+            <div class="absolute left-0 bottom-0 bg-[#1AAAE6] text-white font-black text-5xl md:text-[45px] leading-none px-6 md:px-6 pt-4 md:pt-4 pb-3 md:pb-3 rounded-tr-2xl z-20" data-ps="src/components/home/StepProcess.astro:num2">2</div>
+            <img 
+              src="https://pagesmith-cdn.com/2be62e80/images/Techniker-macht-Installation-:-Wartung-Bild-1536.webp" 
+              alt="Termin vereinbaren und prüfen lassen" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              data-ps="src/components/home/StepProcess.astro:img2"
+            />
+          </div>
+          <div class="p-8 flex flex-col flex-grow" data-ps="src/components/home/StepProcess.astro:content2">
+            <h3 class="text-2xl font-black text-secondary mb-4 leading-tight" data-ps="src/components/home/StepProcess.astro:h3-2">2. Termin vereinbaren und prüfen lassen</h3>
+            <p class="text-muted-foreground leading-relaxed" data-ps="src/components/home/StepProcess.astro:p2">
+              Wir montieren, prüfen oder warten Ihre Rauchwarnmelder fachgerecht nach DIN 14676 und erfassen erkennbare Mängel.
+            </p>
+          </div>
+          <div class="absolute bottom-0 right-0 w-12 h-12 bg-[#1AAAE6]/5 rounded-tl-[100px]" data-ps="src/components/home/StepProcess.astro:accent2"></div>
+        </div>
+        <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-30" data-ps="src/components/home/StepProcess.astro:arrow2">
+          <svg width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L22 24L2 46" stroke="#1AAAE6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative flex flex-col group" data-ps="src/components/home/StepProcess.astro:step3">
+        <div class="absolute left-0 top-0 bottom-0 w-1 bg-[#8AC161] z-10" data-ps="src/components/home/StepProcess.astro:border3"></div>
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full" data-ps="src/components/home/StepProcess.astro:card3">
+          <div class="relative h-64 md:h-72 overflow-hidden" data-ps="src/components/home/StepProcess.astro:img-wrap3">
+            <div class="absolute left-0 bottom-0 bg-[#8AC161] text-white font-black text-5xl md:text-[45px] leading-none px-6 md:px-6 pt-4 md:pt-4 pb-3 md:pb-3 rounded-tr-2xl z-20" data-ps="src/components/home/StepProcess.astro:num3">3</div>
+            <img 
+              src="https://pagesmith-cdn.com/2be62e80/images/Computer-Bild-digitales-Protokoll-Bild-1024.webp" 
+              alt="Digitalen Nachweis erhalten" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              data-ps="src/components/home/StepProcess.astro:img3"
+            />
+          </div>
+          <div class="p-8 flex flex-col flex-grow" data-ps="src/components/home/StepProcess.astro:content3">
+            <h3 class="text-2xl font-black text-secondary mb-4 leading-tight" data-ps="src/components/home/StepProcess.astro:h3-3">3. Digitalen Nachweis erhalten</h3>
+            <p class="text-muted-foreground leading-relaxed" data-ps="src/components/home/StepProcess.astro:p3">
+              Sie erhalten ein übersichtliches Prüfprotokoll und können nachvollziehen, was wann geprüft wurde.
+            </p>
+          </div>
+          <div class="absolute bottom-0 right-0 w-12 h-12 bg-[#8AC161]/5 rounded-tl-[100px]" data-ps="src/components/home/StepProcess.astro:accent3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Features -->
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 pt-12 border-t border-gray-100 md:pt-2" data-ps="src/components/home/StepProcess.astro:features">
+      <div class="flex items-center gap-4" data-ps="src/components/home/StepProcess.astro:feat1">
+        <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-[#F15A24]" data-ps="src/components/home/StepProcess.astro:icon-wrap1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <span class="text-lg font-bold text-secondary" data-ps="src/components/home/StepProcess.astro:label1">Wenig Aufwand.</span>
+      </div>
+      <div class="w-[1px] h-8 bg-gray-200 hidden md:block" data-ps="src/components/home/StepProcess.astro:sep1"></div>
+      <div class="flex items-center gap-4" data-ps="src/components/home/StepProcess.astro:feat2">
+        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-[#1AAAE6]" data-ps="src/components/home/StepProcess.astro:icon-wrap2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <span class="text-lg font-bold text-secondary" data-ps="src/components/home/StepProcess.astro:label2">Klare Abläufe.</span>
+      </div>
+      <div class="w-[1px] h-8 bg-gray-200 hidden md:block" data-ps="src/components/home/StepProcess.astro:sep2"></div>
+      <div class="flex items-center gap-4" data-ps="src/components/home/StepProcess.astro:feat3">
+        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-[#8AC161]" data-ps="src/components/home/StepProcess.astro:icon-wrap3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14.5 2 14.5 7.5 20 7.5"/><line x1="10" y1="13" x2="14" y2="13"/><line x1="10" y1="17" x2="14" y2="17"/><line x1="10" y1="9" x2="11" y2="9"/></svg>
+        </div>
+        <span class="text-lg font-bold text-secondary" data-ps="src/components/home/StepProcess.astro:label3">Digital dokumentiert.</span>
+      </div>
+    </div>
+  </Container>
+</section>

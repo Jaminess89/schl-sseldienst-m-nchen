@@ -1,0 +1,34 @@
+---
+import Container from '@/components/Container.astro';
+---
+
+<section class="relative bg-black text-white pt-20 pb-12 overflow-hidden md:pr-[-11px] md:pt-0 md:pl-0 md:mt-0 md:mb-0 md:w-full md:min-h-[600px]" data-ps="src/components/home/SplitHero.astro:sec">
+  <Container class="relative z-20 pb-24 md:pb-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center md:pt-0 md:h-[420px]" data-ps="src/components/home/SplitHero.astro:grid">
+      <div class="space-y-6 lg:pr-8 relative z-40" data-ps="src/components/home/SplitHero.astro:content">
+        <h2 class="text-[32px] md:text-[42px] font-bold leading-tight text-white tracking-tight pb-[18px]" data-ps="src/components/home/SplitHero.astro:title">
+          Rauchmelder - Pflicht:<br/>
+          Können Sie im Ernstfall<br/>
+          <span class="relative inline-block mt-2" data-ps="src/components/home/SplitHero.astro:3nrl9k">
+            <span class="px-3 py-1 relative z-10 font-bold block" data-ps="src/components/home/SplitHero.astro:3nrl9j">alles beweisen?</span>
+            <svg class="absolute -bottom-[10px] left-0 w-full h-[18px] z-20 text-[#ffe500]" preserveAspectRatio="none" viewBox="0 0 100 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6C30 1 70 1 100 3" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </h2>
+        <p class="text-[17px] text-gray-200 max-w-xl leading-relaxed font-light pb-[18px]" data-ps="src/components/home/SplitHero.astro:desc">
+          Seit dem 1. Januar 2021 sind Rauchmelder auch in älteren Wohnungen im Berlin und Brandenburg Pflicht (§ 48 BauO Bln/BbgBO). Fehlen sie oder funktionieren sie nicht, kann die Bauaufsicht handeln.
+        </p>
+      </div>
+      <div class="relative h-[350px] md:h-[450px] w-full overflow-hidden" data-ps="src/components/home/SplitHero.astro:image-wrapper">
+        <img 
+          src="https://pagesmith-cdn.com/2be62e80/images/Rauchwarnmelder-macht-alarm-1024.webp" 
+          alt="Rauchwarnmelder" 
+          class="absolute inset-0 w-full h-full object-cover object-right md:mb-0 md:pr-[-18px] md:pt-[-11px] md:w-[523px] md:mt-0 md:mr-0 md:ml-[7px] md:h-[458px]"
+          style="mask-image: linear-gradient(to right, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);"
+          data-ps="src/components/home/SplitHero.astro:img"
+        />
+      </div>
+    </div>
+  </Container>
+</section>

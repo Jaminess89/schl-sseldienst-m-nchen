@@ -1,0 +1,100 @@
+---
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const links = [
+  { href: '/#fuer-wen', label: 'Für wen' },
+  { href: '/#pruefung', label: 'Prüfung' },
+  { href: '/#dokumentation', label: 'Dokumentation' },
+  { href: '/#kosten', label: 'Kosten' },
+  { href: '/#faq', label: 'FAQ' },
+];
+---
+
+<header id="navbar" class="sticky top-0 z-50 bg-white border-b border-border">
+  <nav class="h-[80px] flex items-center md:h-[68px]">
+    <Container class="flex justify-between items-center">
+      <a href="/" class="flex items-center no-underline" aria-label={SITE.name}>
+        <img
+          src="https://pagesmith-cdn.com/2be62e80/images/Bildschirmfoto-2026-07-08-um-20.46.23(1)-320-320.webp"
+          alt={SITE.name}
+          class="h-10 w-auto object-contain md:h-10"
+          loading="eager"
+        />
+      </a>
+
+      <div class="hidden md:flex items-center gap-[28px]">
+        {links.map((l) => (
+          <a href={l.href} class="text-[13px] font-bold text-secondary uppercase no-underline hover:text-[#1AAAE6] transition-colors">{l.label}</a>
+        ))}
+        <a href="/#anfrage" class="text-[13px] font-bold uppercase no-underline bg-[#8CC63F] hover:bg-[#7ab336] text-white px-4 py-2 rounded-[9px] transition-colors">Anfrage</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        {SITE.phone && (
+          <a
+            href={`tel:${SITE.phone}`}
+            class="flex items-center gap-2 bg-[#1AAAE6] hover:bg-[#1AAAE6]/90 text-white text-[14px] md:text-[16px] font-bold px-3 py-2 md:px-4 md:py-2.5 rounded-[9px] no-underline transition-all shadow-sm"
+          >
+            <span class="whitespace-nowrap">{SITE.phoneDisplay}</span>
+          </a>
+        )}
+
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="md:hidden p-2 text-secondary"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </Container>
+  </nav>
+
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white border-t border-border"
+    role="navigation"
+    aria-label="Mobile Navigation"
+  >
+    <nav class="flex flex-col py-4 px-6 gap-4">
+      {links.map((l) => (
+        <a href={l.href} class="text-[14px] font-bold text-secondary uppercase no-underline">{l.label}</a>
+      ))}
+      <a href="/#anfrage" class="text-[14px] font-bold uppercase no-underline text-[#8CC63F]">Anfrage</a>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIconOpen = document.getElementById('menu-icon-open');
+  const menuIconClose = document.getElementById('menu-icon-close');
+
+  function toggleMenu() {
+    const isOpen = !mobileMenu?.classList.contains('hidden');
+    if (isOpen) {
+      mobileMenu?.classList.add('hidden');
+      menuIconOpen?.classList.remove('hidden');
+      menuIconClose?.classList.add('hidden');
+      mobileMenuButton?.setAttribute('aria-expanded', 'false');
+    } else {
+      mobileMenu?.classList.remove('hidden');
+      menuIconOpen?.classList.add('hidden');
+      menuIconClose?.classList.remove('hidden');
+      mobileMenuButton?.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  mobileMenuButton?.addEventListener('click', toggleMenu);
+  mobileMenu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', toggleMenu));
+</script>

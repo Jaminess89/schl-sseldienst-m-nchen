@@ -1,0 +1,30 @@
+---
+// NEW SECTION H — Example project-flow (clearly marked, no invented data)
+const phases = [
+  { title: 'Ausgangslage', text: 'In einem Mehrfamilienhaus sind unterschiedliche Gerätetypen vorhanden. Zu einzelnen Wohnungen fehlen aktuelle Angaben.' },
+  { title: 'Vorgehen', text: 'Vorhandene Informationen werden aufgenommen, die Durchführung wird abgestimmt und erkennbare Auffälligkeiten werden dokumentiert.' },
+  { title: 'Ergebnis', text: 'Der Auftraggeber erhält eine strukturierte Übersicht über bearbeitete Wohnungen, festgestellte Punkte und empfohlene nächste Maßnahmen.' },
+];
+---
+
+<section id="beispiel" class="py-16 md:py-24 bg-[#F6F9FC]">
+  <div class="max-w-[1100px] mx-auto px-4">
+    <div class="text-center max-w-[720px] mx-auto mb-12 reveal">
+      <span class="inline-block text-[13px] font-bold uppercase tracking-wider text-[#4B9511] bg-[#8CC63F]/10 px-3 py-1 rounded-full mb-4">Beispiel für einen möglichen Projektablauf</span>
+      <h2 class="text-3xl md:text-[38px] font-bold text-secondary tracking-tight">Von ungeklärtem Bestand zur strukturierten Objektübersicht</h2>
+    </div>
+
+    <div class="relative">
+      <span class="absolute -top-4 left-1/2 -translate-x-1/2 z-10 text-[12px] font-bold text-[#C88A00] bg-[#C88A00]/10 border border-[#C88A00]/30 px-4 py-1.5 rounded-full uppercase tracking-wide">Beispielhafter Ablauf</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-4">
+        {phases.map((p, i) => (
+          <div class={`reveal reveal-delay-${i + 1} relative bg-white border border-border rounded-[18px] p-6 md:p-7 hover:shadow-lg transition-all`}>
+            <span class="absolute -top-4 left-6 w-9 h-9 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-[16px]">{i + 1}</span>
+            <h3 class="text-[19px] font-bold text-secondary mb-2 mt-3">{p.title}</h3>
+            <p class="text-[15px] text-muted-foreground leading-relaxed">{p.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

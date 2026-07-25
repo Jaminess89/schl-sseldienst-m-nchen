@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/home/Hero.astro';
+import TrustBanner from '@/components/home/TrustBanner.astro';
+import SolutionProcess from '@/components/home/SolutionProcess.astro';
+
+import TargetAudience from '@/components/new/TargetAudience.astro';
+import ResidentCoordination from '@/components/new/ResidentCoordination.astro';
+import InspectionPoints from '@/components/new/InspectionPoints.astro';
+import NoReplacement from '@/components/new/NoReplacement.astro';
+import DocumentationPreview from '@/components/new/DocumentationPreview.astro';
+import ManagerBenefits from '@/components/new/ManagerBenefits.astro';
+import CostOrientation from '@/components/new/CostOrientation.astro';
+import CaseStudy from '@/components/new/CaseStudy.astro';
+import FAQNew from '@/components/new/FAQNew.astro';
+import AboutLocal from '@/components/new/AboutLocal.astro';
+import ServiceArea from '@/components/new/ServiceArea.astro';
+import ContactForm from '@/components/new/ContactForm.astro';
+import StickyMobileBar from '@/components/new/StickyMobileBar.astro';
+
+import { SITE } from '@/config/site';
+
+const faqs = [
+  { q: 'Müssen alle vorhandenen Rauchmelder sofort ausgetauscht werden?', a: 'Nein. Zuerst wird geprüft, welche Geräte vorhanden sind und ob sie weiterhin verwendet werden können. Ein Austausch ist in der Regel nur erforderlich, wenn ein Gerät beschädigt, nicht mehr funktionsfähig, ungeeignet ist oder seine vorgesehene Nutzungsdauer erreicht hat.' },
+  { q: 'Was kostet ein Rauchmelderservice?', a: 'Die Kosten hängen unter anderem von der Anzahl der Objekte, Wohnungen und Geräte, der gewünschten Leistung und dem Dokumentationsumfang ab. Es werden keine pauschalen Festpreise genannt.' },
+  { q: 'Übernehmen Sie auch mehrere Objekte oder komplette Wohnungsbestände?', a: 'Ja. Der Service ist für einzelne Wohnungen, Mehrfamilienhäuser und mehrere Objekte geeignet.' },
+  { q: 'Koordinieren Sie die Termine auch direkt mit Bewohnern?', a: 'Auf Wunsch wird bei der Terminabstimmung mit Bewohnern unterstützt und der Bearbeitungsstand zurückgemeldet.' },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": SITE.name,
+    "description": SITE.description,
+    "url": SITE.url,
+    "telephone": SITE.phone,
+    "areaServed": { "@type": "City", "name": "Berlin" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((f) => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  }
+];
+---
+
+<BaseLayout title={SITE.title} description={SITE.description} jsonLd={jsonLd}>
+  <Hero />
+  <TrustBanner />
+  <TargetAudience />
+  <ResidentCoordination />
+  <InspectionPoints />
+  <NoReplacement />
+  <DocumentationPreview />
+  <ManagerBenefits />
+  <SolutionProcess />
+  <CostOrientation />
+  <CaseStudy />
+  <FAQNew />
+  <AboutLocal />
+  <ServiceArea />
+  <ContactForm />
+  <StickyMobileBar />
+</BaseLayout>

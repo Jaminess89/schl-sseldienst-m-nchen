@@ -1,0 +1,116 @@
+<!--
+  PLACEHOLDER-GRAFIK: Bitte vor Veröffentlichung durch ein echtes Foto ersetzen
+  (hero-technician.webp, ca. 1200 × 1000 px).
+  Motiv: freundlicher Servicetechniker im dunkelblauen Normcheck-Poloshirt mit
+  Tablet/Klemmbrett (Prüfprotokoll), Kundin teilweise von hinten, helle moderne
+  Wohnung mit sichtbarem Rauchwarnmelder an der Decke.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 533" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Illustration: Servicetechniker zeigt Kundin das digitale Prüfprotokoll in einer hellen Wohnung</title>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F9FD"/>
+      <stop offset="1" stop-color="#E4EEF7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Raum -->
+  <rect width="640" height="533" fill="url(#wall)"/>
+  <rect y="430" width="640" height="103" fill="#D9E4EF"/>
+  <rect y="426" width="640" height="6" fill="#C4D3E3"/>
+
+  <!-- Fenster -->
+  <g>
+    <rect x="420" y="60" width="160" height="210" rx="8" fill="#FFFFFF" stroke="#C9D8E8" stroke-width="4"/>
+    <rect x="434" y="74" width="132" height="182" rx="4" fill="#DCEEFB"/>
+    <path d="M434 200 L500 120 L566 190 L566 256 L434 256 Z" fill="#C2E0F5"/>
+    <circle cx="470" cy="110" r="18" fill="#FFF3C4"/>
+    <line x1="500" y1="74" x2="500" y2="256" stroke="#C9D8E8" stroke-width="4"/>
+  </g>
+
+  <!-- Bild an der Wand -->
+  <rect x="70" y="80" width="110" height="80" rx="6" fill="#FFFFFF" stroke="#C9D8E8" stroke-width="4"/>
+  <path d="M84 140 L110 112 L132 134 L146 120 L166 140 Z" fill="#9CC3E5"/>
+  <circle cx="100" cy="102" r="8" fill="#F9D976"/>
+
+  <!-- Rauchwarnmelder an der Decke -->
+  <g>
+    <ellipse cx="300" cy="34" rx="34" ry="10" fill="#E8EEF4"/>
+    <ellipse cx="300" cy="30" rx="28" ry="8" fill="#FFFFFF" stroke="#B9C8D8" stroke-width="2"/>
+    <circle cx="300" cy="30" r="4" fill="#25B94B"/>
+  </g>
+
+  <!-- Kundin (von hinten, rechts im Bild) -->
+  <g>
+    <path d="M585 533 L585 300 Q585 240 620 240 Q640 240 640 300 L640 533 Z" fill="#E9B44C"/>
+    <ellipse cx="615" cy="205" rx="34" ry="38" fill="#F2C89B"/>
+    <path d="M585 205 Q580 150 615 148 Q650 150 645 205 Q645 235 635 250 L635 190 Q620 175 600 190 L600 250 Q585 235 585 205 Z" fill="#C98A2D"/>
+  </g>
+
+  <!-- Servicetechniker -->
+  <g>
+    <!-- Beine -->
+    <rect x="255" y="400" width="34" height="133" fill="#1F2937"/>
+    <rect x="305" y="400" width="34" height="133" fill="#111827"/>
+    <!-- Oberkörper: dunkelblaues Polo -->
+    <path d="M235 410 L230 250 Q230 205 297 205 Q364 205 364 250 L359 410 Z" fill="#082C5C"/>
+    <!-- Kragen -->
+    <path d="M278 210 L297 232 L316 210 L297 204 Z" fill="#0E3E7A"/>
+    <!-- Logo auf dem Shirt -->
+    <g>
+      <circle cx="330" cy="260" r="14" fill="#1681D8"/>
+      <path d="M324 260 l4.5 4.5 l8 -9" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="330" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9FB9D9">Normcheck</text>
+    </g>
+    <!-- Kopf -->
+    <ellipse cx="297" cy="160" rx="40" ry="44" fill="#F2C89B"/>
+    <!-- Haare -->
+    <path d="M258 155 Q255 105 297 103 Q339 105 336 155 Q330 128 297 128 Q264 128 258 155 Z" fill="#4A3222"/>
+    <!-- Gesicht: freundliches Lächeln -->
+    <circle cx="283" cy="158" r="3.5" fill="#2B2118"/>
+    <circle cx="311" cy="158" r="3.5" fill="#2B2118"/>
+    <path d="M284 178 Q297 188 310 178" fill="none" stroke="#B0714A" stroke-width="3" stroke-linecap="round"/>
+    <!-- Linker Arm -->
+    <path d="M238 250 Q210 290 218 340 L242 336 Q238 296 254 266 Z" fill="#082C5C"/>
+    <circle cx="229" cy="346" r="12" fill="#F2C89B"/>
+    <!-- Rechter Arm hält Klemmbrett -->
+    <path d="M356 250 Q392 280 398 320 L376 330 Q368 296 346 272 Z" fill="#0E3E7A"/>
+  </g>
+
+  <!-- Klemmbrett / Tablet mit Prüfprotokoll -->
+  <g transform="rotate(-8 430 350)">
+    <rect x="380" y="270" width="130" height="170" rx="10" fill="#0F2740"/>
+    <rect x="388" y="278" width="114" height="154" rx="6" fill="#FFFFFF"/>
+    <rect x="388" y="278" width="114" height="26" rx="6" fill="#1267B1"/>
+    <text x="445" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Prüfprotokoll</text>
+    <g stroke="#D7E2EE" stroke-width="5" stroke-linecap="round">
+      <line x1="398" y1="318" x2="480" y2="318"/>
+      <line x1="398" y1="334" x2="468" y2="334"/>
+      <line x1="398" y1="350" x2="480" y2="350"/>
+      <line x1="398" y1="366" x2="462" y2="366"/>
+    </g>
+    <g fill="none" stroke="#25B94B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M486 316 l4 4 l7 -8"/>
+      <path d="M480 348 l4 4 l7 -8"/>
+    </g>
+    <rect x="398" y="388" width="66" height="18" rx="9" fill="#E8F7ED"/>
+    <text x="431" y="401" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1D9E3F">In Ordnung</text>
+    <circle cx="392" cy="436" r="10" fill="#F2C89B"/>
+  </g>
+
+  <!-- Sofa-Andeutung links -->
+  <g>
+    <rect x="30" y="330" width="150" height="110" rx="14" fill="#7FA8CC"/>
+    <rect x="30" y="300" width="150" height="48" rx="14" fill="#93BADA"/>
+    <rect x="52" y="312" width="46" height="30" rx="8" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="110" y="312" width="46" height="30" rx="8" fill="#EAF3FB"/>
+  </g>
+
+  <!-- Pflanze -->
+  <g>
+    <path d="M596 440 Q560 380 580 330 Q600 380 596 440 Z" fill="#2F855A"/>
+    <path d="M606 440 Q640 386 624 336 Q602 384 606 440 Z" fill="#38A169"/>
+    <path d="M585 440 Q540 410 545 370 Q580 400 585 440 Z" fill="#48BB78"/>
+    <path d="M575 440 h56 l-8 60 h-40 Z" fill="#B7791F"/>
+  </g>
+</svg>
